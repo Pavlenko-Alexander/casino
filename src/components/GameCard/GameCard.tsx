@@ -9,13 +9,12 @@ interface GameCardProps {
 }
 
 export function GameCard({ game }: GameCardProps) {
-  const placeholderImage = "/placeholder-game.png";
 
   return (
     <div className={styles.card}>
       <div className={styles.imageWrapper}>
         <Image
-          src={game.thumbnail || placeholderImage}
+          src={game.original || game.thumbnail}
           alt={game.name}
           fill
           sizes="180px"

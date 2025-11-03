@@ -2,6 +2,7 @@ export interface Game {
   id: string;
   name: string;
   thumbnail: string;
+  original: string;
 }
 
 export interface TransformedGamesResponse {
@@ -16,6 +17,9 @@ export interface ApiGame {
     thumbnail: {
       src: string;
     };
+    original: {
+      src: string;
+    }
   };
 }
 

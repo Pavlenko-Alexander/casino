@@ -61,11 +61,13 @@ export async function fetchInitialGames(categoryFetchUrl: string) {
 
 function transformApiGame(apiGame: ApiGame): Game {
   const thumbnailUrl = apiGame.image?.thumbnail?.src;
+  const originalImageUrl = apiGame.image?.original?.src;
   
   return {
     id: apiGame.id,
     name: apiGame.gameText,
     thumbnail: thumbnailUrl,
+    original: originalImageUrl,
   };
 }
 
