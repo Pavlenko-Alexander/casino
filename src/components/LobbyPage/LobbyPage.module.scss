@@ -1,0 +1,21 @@
+@import "../../styles/variables";
+
+.lobbyContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.navbar {
+  @media (min-width: $breakpoint-tablet) {
+    width: 100%;
+    overflow-y: auto;
+    padding-right: 1rem;
+  }
+}
+
+.gameGrid {
+  min-width: 0;
+}

@@ -1,0 +1,55 @@
+@import "../../styles/variables";
+
+.categoryList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  gap: 0.5rem;
+}
+
+.categoryButton {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: $color-light-2;
+  background-color: transparent;
+  border: none;
+  border-radius: 8px;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  text-wrap: nowrap;
+
+  &:hover {
+    background-color: $color-dark-2;
+    color: $color-light-1;
+  }
+
+  &.active {
+    background-color: $color-primary-dark;
+    color: $color-primary;
+    font-weight: 700;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background-color: $color-primary;
+      border-radius: 0 4px 4px 0;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
